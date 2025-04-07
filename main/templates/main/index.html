@@ -35,10 +35,14 @@
               <li><a href="#" class="nav-link px-2 text-secondary">Менеджер задач</a></li>
               <li><a href="#" class="nav-link px-2 text-white">Пользователи</a></li>
             </ul>
+            {% if not user.is_authenticated%}
             <div class="text-end">
               <button type="button" class="btn btn-outline-light me-2">Login</button>
               <button type="button" class="btn btn-warning"><a href="{% url 'create_user' %}" class="nav-link px-2 text-white">Sign-Up</a></button>
             </div>
+            {% else %}
+            <button type="button" class="btn btn-warning"><a href="{% url 'create_user' %}" class="nav-link px-2 text-white">LogOut</a></button>
+            {% endif %}
           </div>
         </div>
       </header>
