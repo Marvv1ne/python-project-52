@@ -10,7 +10,7 @@ from django.shortcuts import redirect
 
 class SignUp(SuccessMessageMixin, CreateView):
     form_class = UserForm
-    success_url = reverse_lazy("login")
+    success_url = reverse_lazy("home_users")
     template_name = "users/registration.html"
     #extra_context = {'title': gettext_lazy('Create user')}
     success_message = gettext_lazy('User created successfully')
@@ -18,6 +18,7 @@ class SignUp(SuccessMessageMixin, CreateView):
 
 class ListUsers(ListView):
     model = User
+    template_name = 'users/all_users.html'
     context_object_name = 'users'
     extra_context = {'title': gettext_lazy('Users')}
 
@@ -26,6 +27,7 @@ class ListUsers(ListView):
 
 class UpdateUser(SuccessMessageMixin, UpdateView):
     model = User
+    template_name = 'users/registration.html'
     form_class = UserForm
     success_url = reverse_lazy('home_users')
     success_message = gettext_lazy('User successfully changed')
