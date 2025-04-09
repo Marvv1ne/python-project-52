@@ -3,7 +3,7 @@ from django.views.generic import CreateView, ListView, UpdateView, DeleteView
 from django.utils.translation import gettext_lazy
 from django.contrib.messages.views import SuccessMessageMixin
 from .forms import UserForm
-from .models import User
+from .models import AppUser
 from django.contrib import messages
 from django.shortcuts import redirect
 
@@ -17,7 +17,7 @@ class SignUp(SuccessMessageMixin, CreateView):
 
 
 class ListUsers(ListView):
-    model = User
+    model = AppUser
     template_name = 'users/all_users.html'
     context_object_name = 'users'
     extra_context = {'title': gettext_lazy('Users')}
@@ -26,7 +26,7 @@ class ListUsers(ListView):
 
 
 class UpdateUser(SuccessMessageMixin, UpdateView):
-    model = User
+    model = AppUser
     template_name = 'users/registration.html'
     form_class = UserForm
     success_url = reverse_lazy('home_users')
@@ -34,6 +34,6 @@ class UpdateUser(SuccessMessageMixin, UpdateView):
 
 
 class DeleteUser(SuccessMessageMixin, DeleteView):
-    model = User
+    model = AppUser
     success_url = reverse_lazy('home_users')
     success_message = gettext_lazy('User successfully deleted')
