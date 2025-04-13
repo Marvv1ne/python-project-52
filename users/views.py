@@ -10,7 +10,7 @@ from django.shortcuts import redirect
 
 class SignUp(SuccessMessageMixin, CreateView):
     form_class = UserForm
-    success_url = reverse_lazy("home_users")
+    success_url = reverse_lazy("login")
     template_name = "users/registration.html"
     #extra_context = {'title': gettext_lazy('Create user')}
     success_message = gettext_lazy('User created successfully')
