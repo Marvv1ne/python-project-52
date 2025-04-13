@@ -2,10 +2,12 @@ from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView, UpdateView, DeleteView
 from django.utils.translation import gettext_lazy
 from django.contrib.messages.views import SuccessMessageMixin
-from .forms import UserForm
-from .models import AppUser
 from django.contrib import messages
 from django.shortcuts import redirect
+from django.contrib.auth.mixins import LoginRequiredMixin
+
+from .forms import UserForm
+from .models import AppUser
 
 
 class SignUp(SuccessMessageMixin, CreateView):
