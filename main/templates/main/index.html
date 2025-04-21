@@ -39,11 +39,11 @@
             </ul>
             {% if not user.is_authenticated%}
             <div class="text-end">
-              <button type="button" class="btn btn-outline-light me-2"><a href="{% url 'login' %}" class="nav-link px-2 text-white">SignIn</a></button>
-              <button type="button" class="btn btn-warning"><a href="{% url 'create_user' %}" class="nav-link px-2 text-white">Sign-Up</a></button>
+              <button type="button" class="btn btn-outline-light me-2"><a href="{% url 'signin' %}" class="nav-link px-2 text-white">SignIn</a></button>
+              <button type="button" class="btn btn-warning"><a href="{% url 'signup' %}" class="nav-link px-2 text-white">Sign-Up</a></button>
             </div>
             {% else %}
-            <button type="button" class="btn btn-warning"><a href="{% url 'logout' %}" class="nav-link px-2 text-white">LogOut</a></button>
+            <button type="button" class="btn btn-warning"><a href="{% url 'signout' %}" class="nav-link px-2 text-white">Sign-Out</a></button>
             {% endif %}
           </div>
         </div>

@@ -13,7 +13,7 @@ from task_manager.mixins import AuthRequiredMixin, UserPermissionMixin, DeletePr
 
 class SignUp(SuccessMessageMixin, CreateView):
     form_class = UserForm
-    success_url = reverse_lazy("login")
+    success_url = reverse_lazy("signin")
     template_name = "users/registration.html"
     #extra_context = {'title': _('Create user')}
     success_message = _('User created successfully')
