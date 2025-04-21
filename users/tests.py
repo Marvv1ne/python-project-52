@@ -37,8 +37,9 @@ class SignUpPageTests(TestCase):
     
 
 
-class TestUpdateDeleteUser(TestCase):
+class TestLoginLogout(TestCase):
     def setUp(self):
+        self.client = Client()
         self.data = {
         'first_name': 'First_name',
         'last_name': 'Last_name',
@@ -54,10 +55,22 @@ class TestUpdateDeleteUser(TestCase):
             
         })
         self.assertEqual(response.status_code, 302)
+
+
+class TestUpdateDeleteUser(TestCase):
+    def setUp(self):
+        self.data = {
+        'first_name': 'First_name',
+        'last_name': 'Last_name',
+        'username': 'test_username',
+        'password': 'password',
+    }
+        self.user = AppUser.objects.create_user(**self.data)
+        self.client.force_login(self.user)
+    
     
     def test_update_form(self):
-        id = AppUser.objects.get(username='test_username').pk
-        response = self.client.post(reverse('update_user', id), data={
+        response = self.client.post(reverse('update_user', args=[self.user.pk]), data={
             'first_name': 'Another_first_name',
             'last_name': 'Another_last_name',
             'username': 'another_username',
