@@ -79,6 +79,10 @@ class TestUpdateDeleteUser(TestCase):
         })
         self.assertEqual(response.status_code, 302)
     
+    def test_delete_user(self):
+        response = self.client.post(reverse('delete_user', args=[self.user.pk]))
+        self.assertEqual(response.status_code, 302)
+    
     
     
     
