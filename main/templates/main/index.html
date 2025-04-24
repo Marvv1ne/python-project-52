@@ -37,8 +37,8 @@
               <li><a href="#" class="nav-link px-2 text-secondary">Менеджер задач</a></li>
               <li><a href="{% url 'home_users' %}" class="nav-link px-2 text-white">Пользователи</a></li>
               <li><a href="{% url 'statuses' %}" class="nav-link px-2 text-white">Статусы</a></li>
-              <li><a href="#" class="nav-link px-2 text-white">Метки</a></li>
-              <li><a href="#" class="nav-link px-2 text-white">Задачи</a></li>
+              <li><a href="{% url 'labels' %}" class="nav-link px-2 text-white">Метки</a></li>
+              <li><a href="{% url 'tasks' %}" class="nav-link px-2 text-white">Задачи</a></li>
             </ul>
             {% if not user.is_authenticated%}
             <div class="text-end">
