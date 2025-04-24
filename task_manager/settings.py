@@ -34,6 +34,8 @@ INSTALLED_APPS = [
     'main',
     'users',
     'statuses',
+    'tasks',
+    'labels',
     'django_bootstrap5',
     'django.contrib.admin',
     'django.contrib.auth',
