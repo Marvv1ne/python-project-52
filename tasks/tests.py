@@ -4,7 +4,7 @@ from django.urls import reverse
 from users.models import AppUser
 from statuses.models import Status
 from labels.models import Label
-from .models import Task
+from .models import Task, TaskLabelRelation
 
 class TestCreateUpdateDeleteTask(TestCase):
     def setUp(self):
@@ -33,8 +33,8 @@ class TestCreateUpdateDeleteTask(TestCase):
             'name': 'Test_task',
             'description': 'test_description',
             'status': Status.objects.get(name='Test_status1'),
-            'executor': AppUser.objects.get(usernameusername='test_username1'),
-            'labels': Label.objects.get(name='Test_label1'),
+            'executor': AppUser.objects.get(username='test_username1'),
+            'author': self.user
         })
         self.assertEqual(response.status_code, 302)
     
@@ -45,7 +45,7 @@ class TestCreateUpdateDeleteTask(TestCase):
             'description': 'test_description',
             'status': Status.objects.get(name='Test_status1'),
             'executor': AppUser.objects.get(username='test_username1'),
-            'labels': Label.objects.get(name='Test_label1'),
+            'author': self.user
         }
         Task.objects.create(**task_data)
         id = Task.objects.get(name='Test_task').pk
@@ -54,8 +54,7 @@ class TestCreateUpdateDeleteTask(TestCase):
             'description': 'test_description',
             'status': Status.objects.get(name='Test_status2'),
             'executor': AppUser.objects.get(username='test_username2'),
-            'labels': Label.objects.get(name='Test_label2'),
-            
+            'author': self.user
         })
         self.assertEqual(response.status_code, 302)
     
@@ -65,9 +64,9 @@ class TestCreateUpdateDeleteTask(TestCase):
             'description': 'test_description',
             'status': Status.objects.get(name='Test_status1'),
             'executor': AppUser.objects.get(username='test_username1'),
-            'labels': Label.objects.get(name='Test_label1'),
+            'author': self.user            
         }
         Task.objects.create(**task_data)
-        id = Status.objects.get(name='Test_task').pk
+        id = Task.objects.get(name='Test_task').pk
         response = self.client.post(reverse('task_delete', args=[id]))
         self.assertEqual(response.status_code, 302)
