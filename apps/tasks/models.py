@@ -1,9 +1,9 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-from users.models import AppUser
-from statuses.models import Status
-from labels.models import Label
+from apps.users.models import AppUser
+from apps.statuses.models import Status
+from apps.labels.models import Label
 
 
 class Task(models.Model):

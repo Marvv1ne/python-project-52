@@ -5,7 +5,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django_filters.views import FilterView
 
 from task_manager.mixins import AuthRequiredMixin, AuthorDeletionMixin
-from users.models import AppUser
+from apps.users.models import AppUser
 from .models import Task
 from .forms import TaskForm
 from .filters import TaskFilter
