@@ -17,8 +17,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-import main.urls
-import users
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,5 +24,5 @@ urlpatterns = [
     path('statuses/', include('statuses.urls')),
     path('tasks/', include('tasks.urls')),
     path('labels/', include('labels.urls')),
-    path('', include(main.urls)),
+    path('', include('main.urls')),
 ]

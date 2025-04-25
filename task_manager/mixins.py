@@ -1,13 +1,14 @@
 from django.urls import reverse_lazy
 from django.contrib import messages
-from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.auth.mixins import (LoginRequiredMixin,
+                                        UserPassesTestMixin)
 from django.db.models import ProtectedError
 from django.shortcuts import redirect
 from django.utils.translation import gettext as _
 
 
 class AuthRequiredMixin(LoginRequiredMixin):
-    
+
     auth_message = _('You are not logged in! Please log in.')
 
     def dispatch(self, request, *args, **kwargs):
@@ -19,7 +20,7 @@ class AuthRequiredMixin(LoginRequiredMixin):
 
 
 class UserPermissionMixin(UserPassesTestMixin):
-    
+
     permission_message = None
     permission_url = None
 
@@ -32,7 +33,7 @@ class UserPermissionMixin(UserPassesTestMixin):
 
 
 class DeleteProtectionMixin:
-    
+
     protected_message = None
     protected_url = None
 
@@ -45,7 +46,7 @@ class DeleteProtectionMixin:
 
 
 class AuthorDeletionMixin(UserPassesTestMixin):
-    
+
     author_message = None
     author_url = None
 
@@ -55,4 +56,3 @@ class AuthorDeletionMixin(UserPassesTestMixin):
     def handle_no_permission(self):
         messages.error(self.request, self.author_message)
         return redirect(self.author_url)
-
