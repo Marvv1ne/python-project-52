@@ -3,14 +3,23 @@
 {% load i18n %}
 
     
-    {% block title %}<title>Registration</title>{% endblock title %}
+{% extends "main/index.html" %}
+{% load django_bootstrap5 %}
+{% load i18n %}
 
-    {% block content %}
-        <h1>Заполните поля</h1>
-        <form action="{% url 'signup' %}" method="post">
-            {% csrf_token %}
-            {% bootstrap_form form %}
-            <input type="submit" value="Accept" class="btn btn-success">
-        </form>
-    {% endblock content %}
+    
+{% block title %}
+    {{ title }} | {% translate 'Task Manager' %}
+{% endblock %}
+
+{% block content %}
+    <h1 class="my-4">{{ title }}</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% bootstrap_button button_text button_type="submit" button_class="btn btn-primary" %}
+    </form>
+{% endblock %}
+
 
