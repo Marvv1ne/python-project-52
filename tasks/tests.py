@@ -32,9 +32,9 @@ class TestCreateUpdateDeleteTask(TestCase):
         response = self.client.post(reverse('task_create'), data={
             'name': 'Test_task',
             'description': 'test_description',
-            'status': Status.objects.get(name='Test_status1'),
-            'executor': AppUser.objects.get(username='test_username1'),
-            'author': self.user
+            'status': 1,
+            'executor': 1,
+            
         })
         self.assertEqual(response.status_code, 302)
     
@@ -52,9 +52,9 @@ class TestCreateUpdateDeleteTask(TestCase):
         response = self.client.post(reverse('task_update', args=[id]), data={
             'name': 'Updated_test_task',
             'description': 'test_description',
-            'status': Status.objects.get(name='Test_status2'),
-            'executor': AppUser.objects.get(username='test_username2'),
-            'author': self.user
+            'status': 2,
+            'executor': 2,
+            
         })
         self.assertEqual(response.status_code, 302)
     
