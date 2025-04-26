@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.urls import reverse
 
-from users.models import AppUser
+from apps.users.models import AppUser
 from .models import Status
 
 class TestCreateUpdateDeleteStatus(TestCase):

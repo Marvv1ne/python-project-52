@@ -1,9 +1,9 @@
 from django.test import TestCase
 from django.urls import reverse
 
-from users.models import AppUser
-from statuses.models import Status
-from labels.models import Label
+from apps.users.models import AppUser
+from apps.statuses.models import Status
+from apps.labels.models import Label
 from .models import Task, TaskLabelRelation
 
 class TestCreateUpdateDeleteTask(TestCase):

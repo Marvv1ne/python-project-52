@@ -3,7 +3,7 @@ from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 
 #from task_manager.helpers import test_english, remove_rollbar
-from users.models import AppUser
+from apps.users.models import AppUser
 
 
 
