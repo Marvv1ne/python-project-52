@@ -35,7 +35,7 @@ class TaskDetailView(AuthRequiredMixin, DetailView):
 
 class TaskCreateView(AuthRequiredMixin, SuccessMessageMixin, CreateView):
     
-    template_name = 'tasks/form.html'
+    template_name = 'form.html'
     model = Task
     form_class = TaskForm
     success_url = reverse_lazy('tasks')
@@ -54,7 +54,7 @@ class TaskCreateView(AuthRequiredMixin, SuccessMessageMixin, CreateView):
 
 class TaskUpdateView(AuthRequiredMixin, SuccessMessageMixin, UpdateView):
     
-    template_name = 'tasks/form.html'
+    template_name = 'form.html'
     model = Task
     form_class = TaskForm
     success_url = reverse_lazy('tasks')

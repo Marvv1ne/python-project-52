@@ -29,7 +29,7 @@ class ListUsers(ListView):
 
 class UpdateUser(AuthRequiredMixin, UserPermissionMixin, SuccessMessageMixin, UpdateView):
     model = AppUser
-    template_name = 'users/registration.html'
+    template_name = 'form.html'
     form_class = UserForm
     success_url = reverse_lazy('home_users')
     success_message = _('User is successfully updated')

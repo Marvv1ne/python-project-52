@@ -20,7 +20,7 @@ class StatusesListView(AuthRequiredMixin, ListView):
 
 class StatusCreateView(AuthRequiredMixin, SuccessMessageMixin, CreateView):
     
-    template_name = 'statuses/form.html'
+    template_name = 'form.html'
     model = Status
     form_class = StatusForm
     success_url = reverse_lazy('statuses')
@@ -33,7 +33,7 @@ class StatusCreateView(AuthRequiredMixin, SuccessMessageMixin, CreateView):
 
 class StatusUpdateView(AuthRequiredMixin, SuccessMessageMixin, UpdateView):
     
-    template_name = 'statuses/form.html'
+    template_name = 'form.html'
     model = Status
     form_class = StatusForm
     success_url = reverse_lazy('statuses')

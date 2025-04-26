@@ -20,7 +20,7 @@ class LabelsListView(AuthRequiredMixin, ListView):
 
 class LabelCreateView(AuthRequiredMixin, SuccessMessageMixin, CreateView):
     
-    template_name = 'labels/form.html'
+    template_name = 'form.html'
     model = Label
     form_class = LabelForm
     success_url = reverse_lazy('labels')
@@ -33,7 +33,7 @@ class LabelCreateView(AuthRequiredMixin, SuccessMessageMixin, CreateView):
 
 class LabelUpdateView(AuthRequiredMixin, SuccessMessageMixin, UpdateView):
     
-    template_name = 'labels/form.html'
+    template_name = 'form.html'
     model = Label
     form_class = LabelForm
     success_url = reverse_lazy('labels')

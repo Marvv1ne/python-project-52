@@ -17,12 +17,12 @@ class SignUpPageTests(TestCase):
     def test_signup_page_url(self):
         response = self.client.get("/users/signup/")
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, template_name='users/registration.html')
+        self.assertTemplateUsed(response, template_name='form.html')
 
     def test_signup_page_view_name(self):
         response = self.client.get(reverse('signup'))
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, template_name='users/registration.html')
+        self.assertTemplateUsed(response, template_name='form.html')
 
     def test_signup_form(self):
         response = self.client.post(reverse('signup'), data={
