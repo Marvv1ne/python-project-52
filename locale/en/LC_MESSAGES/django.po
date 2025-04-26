@@ -130,7 +130,7 @@ msgstr "Войти"
 
 #: main/templates/main/index.html:33
 msgid "Sign-Up"
-msgstr ""
+msgstr "Регистрация"
 
 #: main/templates/main/index.html:36
 msgid "Sign-Out"
