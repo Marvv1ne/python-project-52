@@ -9,17 +9,17 @@ from .forms import LabelForm
 
 
 class LabelsListView(AuthRequiredMixin, ListView):
-    
+
     template_name = 'labels/labels.html'
     model = Label
     context_object_name = 'labels'
     extra_context = {
-        'title': _('Labels')
-    }
+                     'title': _('Labels')
+                     }
 
 
 class LabelCreateView(AuthRequiredMixin, SuccessMessageMixin, CreateView):
-    
+
     template_name = 'form.html'
     model = Label
     form_class = LabelForm
@@ -32,7 +32,7 @@ class LabelCreateView(AuthRequiredMixin, SuccessMessageMixin, CreateView):
 
 
 class LabelUpdateView(AuthRequiredMixin, SuccessMessageMixin, UpdateView):
-    
+
     template_name = 'form.html'
     model = Label
     form_class = LabelForm
@@ -46,7 +46,7 @@ class LabelUpdateView(AuthRequiredMixin, SuccessMessageMixin, UpdateView):
 
 class LabelDeleteView(AuthRequiredMixin, DeleteProtectionMixin,
                       SuccessMessageMixin, DeleteView):
-    
+
     template_name = 'labels/delete.html'
     model = Label
     success_url = reverse_lazy('labels')

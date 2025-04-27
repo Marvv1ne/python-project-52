@@ -1,7 +1,7 @@
 from django.urls import path
 
-from .views import LabelsListView, LabelCreateView,\
-    LabelUpdateView, LabelDeleteView
+from .views import LabelsListView, LabelCreateView, \
+                   LabelUpdateView, LabelDeleteView
 
 
 urlpatterns = [

@@ -12,7 +12,7 @@ from .filters import TaskFilter
 
 
 class TasksListView(AuthRequiredMixin, FilterView):
-    
+
     template_name = 'tasks/tasks.html'
     model = Task
     filterset_class = TaskFilter
@@ -24,7 +24,7 @@ class TasksListView(AuthRequiredMixin, FilterView):
 
 
 class TaskDetailView(AuthRequiredMixin, DetailView):
-    
+
     template_name = 'tasks/task_show.html'
     model = Task
     context_object_name = 'task'
@@ -34,7 +34,7 @@ class TaskDetailView(AuthRequiredMixin, DetailView):
 
 
 class TaskCreateView(AuthRequiredMixin, SuccessMessageMixin, CreateView):
-    
+
     template_name = 'form.html'
     model = Task
     form_class = TaskForm
@@ -46,14 +46,14 @@ class TaskCreateView(AuthRequiredMixin, SuccessMessageMixin, CreateView):
     }
 
     def form_valid(self, form):
-        
+
         user = self.request.user
         form.instance.author = AppUser.objects.get(pk=user.pk)
         return super().form_valid(form)
 
 
 class TaskUpdateView(AuthRequiredMixin, SuccessMessageMixin, UpdateView):
-    
+
     template_name = 'form.html'
     model = Task
     form_class = TaskForm
@@ -67,7 +67,7 @@ class TaskUpdateView(AuthRequiredMixin, SuccessMessageMixin, UpdateView):
 
 class TaskDeleteView(AuthRequiredMixin, AuthorDeletionMixin,
                      SuccessMessageMixin, DeleteView):
-    
+
     template_name = 'tasks/delete.html'
     model = Task
     success_url = reverse_lazy('tasks')

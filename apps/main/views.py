@@ -6,6 +6,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib import messages
 
+
 class IndexView(TemplateView):
     template_name = 'main/index.html'
     extra_context = {'title': _('Task manager')}
