@@ -46,6 +46,7 @@ class UpdateUser(AuthRequiredMixin, UserPermissionMixin,
 
 class DeleteUser(AuthRequiredMixin, UserPermissionMixin,
                  DeleteProtectionMixin, SuccessMessageMixin, DeleteView):
+    template_name = 'users/delete_user.html'
     model = AppUser
     success_url = reverse_lazy('home_users')
     success_message = _('User successfully deleted')

@@ -16,6 +16,6 @@ if os.path.isfile(os.path.join(os.path.dirname(__file__), 'local_settings.py')):
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "local_settings")
 else:
 # Если нет — используем стандартные настройки без секретов
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'task_manager.settings.development')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'task_manager.settings.production')
 application = get_wsgi_application()
 
