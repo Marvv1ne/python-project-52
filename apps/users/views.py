@@ -14,7 +14,7 @@ from task_manager.mixins import AuthRequiredMixin, UserPermissionMixin, \
 class SignUp(SuccessMessageMixin, CreateView):
     form_class = UserForm
     success_url = reverse_lazy("signin")
-    template_name = "users/registration.html"
+    template_name = "form.html"
     extra_context = {
                      'title': _('Create user'),
                      'button_text': _('Confirm'),

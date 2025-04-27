@@ -19,7 +19,7 @@ class UserLoginView(SuccessMessageMixin, LoginView):
     success_message = _('You are logged in')
     extra_context = {
         'title': _('Login'),
-        'button_text': _('Enter'),
+        'button_text': _('Login'),
     }
 
 
