@@ -6,9 +6,11 @@ load_dotenv()
 
 DEBUG = False
 ALLOWED_HOSTS = [
+    'webserver',
     '127.0.0.1',
     '0.0.0.0',
     'localhost',
+    'render',
 ]
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
