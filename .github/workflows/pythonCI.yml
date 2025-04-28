@@ -8,6 +8,7 @@ jobs:
               python-version: [3.12]
       steps:
           - run: echo "runing jobs"
+          - run: echo ${{ DATABASE_URL }}
           - name: Check out repository code
             uses: actions/checkout@v4
           - name: Set up Python ${{ matrix.python-version }}
@@ -22,7 +23,7 @@ jobs:
           - run: echo "🖥️ The workflow is now ready to test and lint your code on the runner."
           - name: Testing
             run: make test
-          - run: echo "Testing coplite"
+          - run: echo "Testing complite"
           - name: Start flake8 linter
             run: make lint
           - run: echo "Linting complite"
