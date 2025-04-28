@@ -22,6 +22,8 @@ jobs:
             run: make sync
           - run: echo "🖥️ The workflow is now ready to test and lint your code on the runner."
           - name: Testing
+            env:
+              DATABASE_URL: ${{ secrets.DATABASE_URL }}
             run: make test
           - run: echo "Testing complite"
           - name: Start flake8 linter
