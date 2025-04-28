@@ -18,9 +18,7 @@ if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 DATABASES = {
-             'default': dj_database_url.parse(os.environ.get('DATABASE_URL'), conn_max_age=600),
+             'default': dj_database_url.parse(os.getenv('DATABASE_URL'), conn_max_age=600),
              }
 
 LOCALE_PATHS = ("locale",)
-print(os.environ.get('DATABASE_URL'))
-
