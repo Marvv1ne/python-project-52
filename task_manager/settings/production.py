@@ -10,7 +10,7 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     '0.0.0.0',
     'localhost',
-    'render',
+    '*.render.com',
 ]
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
@@ -22,4 +22,5 @@ DATABASES = {
              }
 
 LOCALE_PATHS = ("locale",)
+print(os.environ.get('DATABASE_URL'))
 
