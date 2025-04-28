@@ -8,7 +8,7 @@ jobs:
               python-version: [3.12]
       steps:
           - run: echo "runing jobs"
-          - run: echo $DATABASE_URL
+          - run: echo ${{ secrets.DATABASE_URL }}
           - name: Check out repository code
             uses: actions/checkout@v4
           - name: Set up Python ${{ matrix.python-version }}
