@@ -1,0 +1,27 @@
+name: PythonCI
+on: [push]
+jobs:
+    runs-on: ubuntu-latest
+    strategy:
+        matrix:
+            python-version: [3.12]
+    steps:
+        - run: echo "runing jobs"
+        - name: Check out repository code
+          uses: actions/checkout@v4
+        - name: Set up Python ${{ matrix.python-version }}
+          uses: actions/setup-python@v5
+          with: python-version: ${{ matrix.python-verion }}
+        - run: echo "💡 The repository has been cloned to the runner."
+        - name: Install uv
+          run: curl -LsSf https://astral.sh/uv/install.sh | sh
+        - name: Install dependencies
+          run: make sync
+        - run: echo "🖥️ The workflow is now ready to test and lint your code on the runner."
+        - name: Testing
+          run: make test
+        - run: echo "Testing coplite"
+        - name: Start flake8 linter
+          run: make lint
+        - run: echo "Linting complite"
+        
