@@ -21,19 +21,17 @@
               <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
             </a>
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li><a href="{% url 'index' %}" class="nav-link px-2 text-secondary">{% trans "Task manager" %}</a></li>
-              <li><a href="{% url 'home_users' %}" class="nav-link px-2 text-white">{% trans "Users" %}</a></li>
-              <li><a href="{% url 'statuses' %}" class="nav-link px-2 text-white">{% trans "Statuses" %}</a></li>
-              <li><a href="{% url 'labels' %}" class="nav-link px-2 text-white">{% trans "Labels" %}</a></li>
-              <li><a href="{% url 'tasks' %}" class="nav-link px-2 text-white">{% trans "Tasks" %}</a></li>
-            </ul>
+              <li class="nav-item"><a href="{% url 'index' %}" class="nav-link px-2 text-secondary">{% trans "Task manager" %}</a></li>
+              <li class="nav-item"><a href="{% url 'home_users' %}" class="nav-link px-2 text-white">{% trans "Users" %}</a></li>
             {% if not user.is_authenticated%}
-            <div class="text-end">
-              <button type="button" class="btn btn-outline-light me-2"><a href="{% url 'signin' %}" class="nav-link px-2 text-white">{% trans "Sign-In" %}</a></button>
-              <button type="button" class="btn btn-warning"><a href="{% url 'signup' %}" class="nav-link px-2 text-white">{% trans "Sign-Up" %}</a></button>
-            </div>
+              <li class="nav-item"><a href="{% url 'signin' %}" class="nav-link px-2 text-white">{% trans "Sign-In" %}</a></li>
+              <li class="nav-item"><a href="{% url 'signup' %}" class="nav-link px-2 text-white">{% trans "Sign-Up" %}</a></li>
             {% else %}
-            <bootstrap_button button_text button_type="submit" button_class="btn btn-warning"><a href="{% url 'signout' %}" class="nav-link px-2 text-white">{% trans "Sign-Out" %}</a></button>
+              <li class="nav-item"><a href="{% url 'statuses' %}" class="nav-link px-2 text-white">{% trans "Statuses" %}</a></li>
+              <li class="nav-item"><a href="{% url 'labels' %}" class="nav-link px-2 text-white">{% trans "Labels" %}</a></li>
+              <li class="nav-item"><a href="{% url 'tasks' %}" class="nav-link px-2 text-white">{% trans "Tasks" %}</a></li>
+              <li class="nav-item"><a href="{% url 'signout' %}" class="nav-link px-2 text-white">{% trans "Sign-Out" %}</a></li>
+            </ul>
             {% endif %}
           </div>
         </div>
