@@ -223,13 +223,13 @@ msgstr "У Вас нет прав менять информацию другог
 
 #: apps/users/views.py:42
 msgid "Update user"
-msgstr "Обновить пользователя"
+msgstr "Изменить пользователя"
 
 #: apps/users/views.py:43 templates/labels/labels.html:33
 #: templates/statuses/statuses.html:30 templates/tasks/task_show.html:58
 #: templates/tasks/tasks.html:48 templates/users/all_users.html:32
 msgid "Update"
-msgstr "Обновить"
+msgstr "Изменить"
 
 #: apps/users/views.py:51
 msgid "User successfully deleted"
