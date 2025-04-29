@@ -11,11 +11,21 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-if os.path.isfile(os.path.join(os.path.dirname(__file__), 'local_settings.py')):
+if os.path.isfile(
+                  os.path.join(
+                               os.path.dirname(__file__),
+                               'local_settings.py'
+                               )
+                  ):
     # Если рядом с manage.py лежит local_settings.py — используем его
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "local_settings")
+    os.environ.setdefault(
+                          "DJANGO_SETTINGS_MODULE",
+                          "local_settings"
+                          )
 else:
-# Если нет — используем стандартные настройки без секретов
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'task_manager.settings.production')
+    # Если нет — используем стандартные настройки без секретов
+    os.environ.setdefault(
+                          'DJANGO_SETTINGS_MODULE',
+                          'task_manager.settings.production'
+                          )
 application = get_wsgi_application()
-
