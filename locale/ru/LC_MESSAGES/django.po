@@ -203,7 +203,7 @@ msgstr "Создать пользователя"
 
 #: apps/users/views.py:20
 msgid "Confirm"
-msgstr "Подтвердить"
+msgstr "Зарегистрировать"
 
 #: apps/users/views.py:22
 msgid "User created successfully"
