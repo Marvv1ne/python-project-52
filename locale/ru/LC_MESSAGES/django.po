@@ -91,7 +91,7 @@ msgstr "Вы вошли в систему"
 
 #: apps/main/views.py:21 apps/main/views.py:22
 msgid "Login"
-msgstr "Авторизоваться"
+msgstr "Войти"
 
 #: apps/main/views.py:28 apps/main/views.py:31
 msgid "You are logged out"
