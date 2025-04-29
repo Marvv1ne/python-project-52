@@ -207,7 +207,7 @@ msgstr "Зарегистрировать"
 
 #: apps/users/views.py:22
 msgid "User created successfully"
-msgstr "Пользователь успешно создан"
+msgstr "Пользователь успешно зарегистрирован"
 
 #: apps/users/views.py:29 templates/main/index.html:25
 msgid "Users"
