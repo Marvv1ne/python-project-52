@@ -105,7 +105,7 @@ msgstr "Статус"
 #: apps/statuses/models.py:22 apps/statuses/views.py:17
 #: templates/main/index.html:26
 msgid "Statuses"
-msgstr "Стасусы"
+msgstr "Статусы"
 
 #: apps/statuses/views.py:27
 msgid "Status successfully created"
