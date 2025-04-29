@@ -22,4 +22,3 @@ DATABASES = {
              }
 
 LOCALE_PATHS = ("locale",)
-print(dj_database_url.parse(os.getenv('DATABASE_URL')))
