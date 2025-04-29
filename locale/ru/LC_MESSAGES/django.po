@@ -95,7 +95,7 @@ msgstr "Войти"
 
 #: apps/main/views.py:28 apps/main/views.py:31
 msgid "You are logged out"
-msgstr "Вы вышли из системы"
+msgstr "Вы разлогинены"
 
 #: apps/statuses/models.py:21 apps/tasks/models.py:35
 #: templates/tasks/task_show.html:36 templates/tasks/tasks.html:29
