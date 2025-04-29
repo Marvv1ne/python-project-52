@@ -219,7 +219,7 @@ msgstr "Пользователь успешно изменен"
 
 #: apps/users/views.py:39 apps/users/views.py:52
 msgid "You have no rights to change another user."
-msgstr "У Вас нет прав менять информацию другого пользователя"
+msgstr "У вас нет прав для изменения"
 
 #: apps/users/views.py:42
 msgid "Update user"
