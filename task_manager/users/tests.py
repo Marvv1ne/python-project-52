@@ -2,7 +2,7 @@ from django.test import TestCase, Client
 from django.urls import reverse
 
 
-from apps.users.models import AppUser
+from task_manager.users.models import AppUser
 
 
 class SignUpPageTests(TestCase):

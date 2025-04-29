@@ -45,11 +45,11 @@ if RENDER_EXTERNAL_HOSTNAME:
 # Application definition
 
 INSTALLED_APPS = [
-    'apps.main',
-    'apps.users',
-    'apps.statuses',
-    'apps.tasks',
-    'apps.labels',
+    'task_manager.main',
+    'task_manager.users',
+    'task_manager.statuses',
+    'task_manager.tasks',
+    'task_manager.labels',
     'django_bootstrap5',
     'django.contrib.admin',
     'django.contrib.auth',
