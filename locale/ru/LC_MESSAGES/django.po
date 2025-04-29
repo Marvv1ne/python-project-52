@@ -270,7 +270,7 @@ msgstr "Удалить"
 
 #: templates/main/index.html:32
 msgid "Sign-In"
-msgstr "Войти"
+msgstr "Вход"
 
 #: templates/main/index.html:33
 msgid "Sign-Up"
