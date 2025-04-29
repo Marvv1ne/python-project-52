@@ -13,7 +13,7 @@ class SignUpPageTests(TestCase):
         self.password = 'password',
 
     def test_signup_page_url(self):
-        response = self.client.get("/users/signup/")
+        response = self.client.get("/users/create/")
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, template_name='form.html')
 
