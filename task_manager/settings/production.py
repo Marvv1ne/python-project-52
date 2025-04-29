@@ -25,7 +25,8 @@ DATABASES = {
 }
 
 if os.getenv('DATABASE_URL'):
-    DATABASES['default'].update(dj_database_url.config(conn_max_age=600))
+    db_from_env = dj_database_url.config(conn_max_age=600)
+    DATABASES['default'].update(db_from_env)
 
 LOCALE_PATHS = ("locale",)
 print(dj_database_url.parse(os.getenv('DATABASE_URL')))
