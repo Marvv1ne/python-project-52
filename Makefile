@@ -29,4 +29,7 @@ start:
 
 makemessages:
 	 	django-admin makemessages
+
+render-start:
+		gunicorn task_manager.wsgi
 		
