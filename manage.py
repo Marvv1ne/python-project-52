@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
@@ -6,13 +6,7 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    
-    if os.path.isfile(os.path.join(os.path.dirname(__file__), 'local_settings.py')):
-    # Если рядом с manage.py лежит local_settings.py — используем его
-        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "local_settings")
-    else:
-    # Если нет — используем стандартные настройки без секретов
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'task_manager.settings.production')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'task_manager.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
