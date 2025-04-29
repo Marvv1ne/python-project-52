@@ -3,7 +3,7 @@ exclude =
     migrations
     __pycache__
     manage.py
-    task_manager/settings/
+    task_manager/settings.py
     admin.py
     env
     .env
