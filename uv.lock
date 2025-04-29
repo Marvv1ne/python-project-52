@@ -76,6 +76,12 @@ wheels = [
 ]
 
 [[package]]
+name = "django-pytest"
+version = "0.2.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/b2/e2/2a87105042c08a6f116aac1d9c666e89982a4f707652a0f7d76e8a88b554/django-pytest-0.2.0.tar.gz", hash = "sha256:de21f20f9e7eb941529d75078b18192506a9f6d4ae80f86fbe2f3bcac8e09d71", size = 5906 }
+
+[[package]]
 name = "dotenv"
 version = "0.9.9"
 source = { registry = "https://pypi.org/simple" }
@@ -122,6 +128,7 @@ dependencies = [
     { name = "django-bootstrap5" },
     { name = "django-debug-toolbar" },
     { name = "django-filter" },
+    { name = "django-pytest" },
     { name = "dotenv" },
     { name = "flake8" },
     { name = "gunicorn" },
@@ -135,6 +142,7 @@ requires-dist = [
     { name = "django-bootstrap5", specifier = ">=25.1" },
     { name = "django-debug-toolbar", specifier = ">=4.3.0" },
     { name = "django-filter", specifier = ">=25.1" },
+    { name = "django-pytest", specifier = ">=0.2.0" },
     { name = "dotenv", specifier = ">=0.9.9" },
     { name = "flake8", specifier = ">=7.2.0" },
     { name = "gunicorn", specifier = ">=23.0.0" },
