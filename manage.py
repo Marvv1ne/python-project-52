@@ -6,7 +6,9 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    if os.path.isfile(os.path.join(os.path.dirname(__file__), 'local_settings.py')):
+    if 'test' in sys.argv or 'test_coverage' in sys.argv: #Covers regular testing and django-coverage
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'task_manager.settings.development')
+    elif os.path.isfile(os.path.join(os.path.dirname(__file__), 'local_settings.py')):
     # Если рядом с manage.py лежит local_settings.py — используем его
         os.environ.setdefault("DJANGO_SETTINGS_MODULE", "local_settings")
     else:
