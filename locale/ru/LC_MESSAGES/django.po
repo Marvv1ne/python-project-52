@@ -87,7 +87,7 @@ msgstr "Менеджер задач"
 
 #: apps/main/views.py:19
 msgid "You are logged in"
-msgstr "Вы вошли в систему"
+msgstr "Вы залогинены"
 
 #: apps/main/views.py:21 apps/main/views.py:22
 msgid "Login"
