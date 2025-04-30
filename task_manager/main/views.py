@@ -8,12 +8,12 @@ from django.contrib import messages
 
 
 class IndexView(TemplateView):
-    template_name = 'main/index.html'
+    template_name = 'main/main.html'
     extra_context = {'title': _('Task manager')}
 
 
 class UserLoginView(SuccessMessageMixin, LoginView):
-    template_name = 'main/login.html'
+    template_name = "form.html"
     form_class = AuthenticationForm
     next_page = reverse_lazy('index')
     success_message = _('You are logged in')

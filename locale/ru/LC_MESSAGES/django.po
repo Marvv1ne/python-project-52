@@ -272,6 +272,18 @@ msgstr "Удалить"
 msgid "Sign-In"
 msgstr "Вход"
 
+#: templates/main/main.html:16
+msgid "Hello!"
+msgstr "Привет!"
+
+#: templates/main/main.html:17
+msgid "Welcome to main page of task manager project"
+msgstr "Добро пожаловать на главную страницу менеджера задач"
+
+#: templates/main/main.html:18
+msgid "Source"
+msgstr "Исходный код"
+
 #: templates/main/index.html:33
 msgid "Sign-Up"
 msgstr "Регистрация"
