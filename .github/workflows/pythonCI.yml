@@ -24,6 +24,7 @@ jobs:
           - name: Testing
             env:
               DATABASE_URL: ${{ secrets.DATABASE_URL }}
+              SECRET_KEY : ${{ secrets.SECRET_KEY }}
             run: make test
           - run: echo "Testing complite"
           - name: Start flake8 linter
