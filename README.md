@@ -13,7 +13,7 @@
 #### --> [Demo](https://python-project-52-1-5wvv.onrender.com) <--
 
 ### Description
-Check websites for SEO suitability for free
+A task management web application built with Python and Django framework. It allows you to set tasks, assign performers and change their statuses. Registration and authentication are required to work with the system.
 
 ## Technologies Used
 - Python 3.12
