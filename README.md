@@ -10,7 +10,7 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Marvv1ne_python-project-52&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Marvv1ne_python-project-52)
 
 
-#### --> [Demo](https://python-project-52-1-5wvv.onrender.com) <--
+#### --> [Project demonstration](https://python-project-52-1-5wvv.onrender.com) <--
 
 ### Description
 A task management web application built with Python and Django framework. It allows you to set tasks, assign performers and change their statuses. Registration and authentication are required to work with the system.
